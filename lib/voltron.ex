@@ -1,0 +1,2 @@
+defmodule Voltron do
+end
