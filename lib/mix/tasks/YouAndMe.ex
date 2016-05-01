@@ -21,7 +21,7 @@ defmodule Mix.Tasks.YouAndMe do
   defp who(:vic), do: "Me"
 
   defp happy(you, me) do
-    "Happy one year of funtional love between #{you} and #{me}"
+    "Happy one year of functional love between #{you} and #{me}!"
   end
 
 
