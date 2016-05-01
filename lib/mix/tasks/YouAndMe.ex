@@ -4,7 +4,7 @@ defmodule Mix.Tasks.YouAndMe do
   @moduledoc "Lets map-reduce you and me on an infinite loop"
   @shortdoc "Lets map-reduce you and me on an infinite loop"
   def run(_) do
-    you_and_me("you", "me")
+    you_and_me(:zu, :vic)
   end
 
   # This is private, just between you and me
@@ -14,8 +14,11 @@ defmodule Mix.Tasks.YouAndMe do
   end
 
   defp mix(you, me) do
-    [you, me] |> Enum.map(&String.capitalize/1) |> Enum.reduce(&happy/2)
+    [you, me] |> Enum.map(&who/1) |> Enum.reduce(&happy/2)
   end
+
+  defp who(:zu),  do: "You"
+  defp who(:vic), do: "Me"
 
   defp happy(you, me) do
     "Happy one year of funtional love between #{you} and #{me}"
